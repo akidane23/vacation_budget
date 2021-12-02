@@ -1,22 +1,21 @@
-//BELOW THE CORRECT RELATIONSHIPS STILL NEED TO BE MADE BUT THE NAMING AND SUCH 
-//FOR THE ID'S IS ALL RIGHT HERE TO GIVE US A GOOD START
+
 // import models
 const User = require('./User');
-const Tag = require('./Tag');
-const UserTag = require('./UserTag');
+const Trip = require('./Trip');
+const UserTrip = require('./UserTrip');
+
+User.hasMany(Trip, {
+  foreignKey: 'User_id',
+});
+
+UserTrip.belongsTo(User, {
+    foreginKey: 'User_id',
+    onDelete: 'cascade',
+});
 
 Trip.hasMany(User, {
-  foreignKey: 'Trip_id',
-});
-
-User.belongsToMany(Tag, {
-  through: UserTag,
-  foreignKey: 'user_id',
-});
-
-Tag.belongsToMany(User, {
-  through: UserTag,
-  foreignKey: 'trip_id',
+  through: 'UserTrip',
+  foreignKey: 'user',
 });
 
 module.exports = {
