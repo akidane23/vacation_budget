@@ -6,6 +6,11 @@ const trip = require('./trip.js');
 const userTrip = require('./usertrip.js');
 
 
+Trip.hasMany(User, {
+  foreignKey: 'Trip_id',
+});
+
+
 router.use('/users', users);
 router.use('/trip', trip);
 router.use('/usetrip', usertrip);
