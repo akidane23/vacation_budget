@@ -1,0 +1,89 @@
+<link rel="stylesheet" href="/css/dashboard.css">
+
+<nav class="navbar navbar-expand-lg">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
+    aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+
+
+    <div class="sondertitle2 nav-item active pb-3 mx-2" onclick="location.href='/'">Sonder</div>
+
+
+    <div class="dashboardtitle2 nav-item active text-center mx-4">Dashboard</div>
+
+    <div class="passportinfo" style="display: flex; justify-content: flex-right">
+      <div class="nav-item active user-info mx-2" id="user-info">
+      </div>
+
+      <button type="button" class="btn btn-outline-danger btn-sm m-2 logoutbtn mx-2 mt-4">Log Out</button>
+    </div>
+  </div>
+</nav>
+
+<div class="container dashbody">
+  <div class="buttonspersonal">
+    <button class="createGroup cg" data-target=".bd-example-modal-lg" data-toggle="modal">Create Group</button>
+    <button class="joinGroup jg">Join Group</button>
+  </div>
+
+  <div class="container">
+  </div>
+  <div class="row">
+    <div class="col">
+
+    </div>
+    <div class="col">
+      <div class="container groupdivs text-center">
+        <p class="p1 font"> Your Current Groups</p>
+        <p class="p2 font"> Click on the group to continue with selection process</p>
+      </div>
+    </div>
+    <div class="col">
+
+    </div>
+  </div>
+</div>
+
+
+
+
+{{!-- Modal Code --}}
+<div class="modal fade bd-example-modal-lg " tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="card mb-4 border-dark">
+        <h4 class="card-header text-light bg-dark text-center">
+          Create A New Group!
+        </h4>
+        <div class="card-body">
+          <form>
+            <div class="form-group">
+              <label for="name">Group Name</label>
+              <input type="text" class="form-control" id="newgroupname-input" placeholder="Enter Group Name">
+            </div>
+            <button type="submit" class="btn btn-primary submitcreategroup" id="submit-btn">Create Group</button>
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</br></br></br></br></br></br></br>
+{{!-- 
+Temp buttons that will be removed at the end of the projected added them for ease of navigation --}}
+{{!-- <h1>Development Buttons</h1>
+<a type="button" class="btn  btn-lg btn-success" href="/">Home</a>
+<a type="button" class="btn btn-lg btn-success" href="/login">Login PAGE</a>
+<a type="button" class="btn btn-lg btn-success" href="/signup">SignUp PAGE</a>
+<a type="button" class="btn  btn-lg btn-success" href="/dashboard">Dashboard Page</button>
+  <a type="button" class="btn btn-lg btn-success" href="/grouppage">Group Page</a>
+  <a type="button" class="btn btn-lg btn-success" href="/creategroup">Create Group Page</a>
+ --}}
+
+
+<script src="/js/dashboard.js"></script>
