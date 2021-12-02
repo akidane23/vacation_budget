@@ -1,26 +1,15 @@
-//BELOW THE CORRECT RELATIONSHIPS STILL NEED TO BE MADE BUT THE NAMING AND SUCH 
-//FOR THE ID'S IS ALL RIGHT HERE TO GIVE US A GOOD START
-// import models
-const User = require('./User');
-const Tag = require('./Tag');
-const UserTag = require('./UserTag');
+const models  = require('../../models');
+const express = require('express');
+const router  = express.Router();
+const users = require('./users.js');
+const trip = require('./trip.js');
+const userTrip = require('./usertrip.js');
 
-User.belongsTo(Category, {
-  foreignKey: 'user_id',
-});
 
-User.belongsToMany(Tag, {
-  through: UserTag,
-  foreignKey: 'user_id',
-});
+router.use('/users', users);
+router.use('/trip', trip);
+router.use('/usetrip', usertrip);
 
-Tag.belongsToMany(User, {
-  through: UserTag,
-  foreignKey: 'trip_id',
-});
 
-module.exports = {
-  User,
-  Tag,
-  UserTag,
-};
+
+module.exports = router;
