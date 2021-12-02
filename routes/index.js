@@ -1,9 +1,7 @@
+const models 
 const express = require("express")
 const router = express.Router();
 
-router.get("/", (req, res) => {
-    console.log("hit it")
-    res.render("home")
-})
-
+var users = require('./users.js');
+var vacationOptions = require('./vacationOptions.js');
 module.exports = router;
