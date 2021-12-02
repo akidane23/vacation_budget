@@ -5,8 +5,8 @@ const User = require('./User');
 const Tag = require('./Tag');
 const UserTag = require('./UserTag');
 
-User.belongsTo(Category, {
-  foreignKey: 'user_id',
+Trip.hasMany(User, {
+  foreignKey: 'Trip_id',
 });
 
 User.belongsToMany(Tag, {
