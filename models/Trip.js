@@ -15,20 +15,10 @@ Trip.init(
       type: DataTypes.STRING,
       allowNull: false
     },
-    post_url: {
+    location: {
       type: DataTypes.STRING,
       allowNull: false,
-      validate: {
-        isURL: true
-      }
     },
-    user_id: {
-      type: DataTypes.INTEGER,
-      references: {
-        model: 'user',
-        key: 'id'
-      }
-    }
   },
   {
     sequelize,
@@ -38,4 +28,4 @@ Trip.init(
   }
 );
 
-module.exports = { Trip };
+module.exports = Trip;

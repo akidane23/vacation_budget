@@ -1,4 +1,4 @@
-var models  = require('../../models');
+const models  = require('../../models');
 var express = require('express');
 var router  = express.Router();
 var users = require('./users.js');
