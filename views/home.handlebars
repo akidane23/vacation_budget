@@ -2,18 +2,49 @@
 <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,100' rel='stylesheet' type='text/css'>
 
 <link rel="stylesheet" href="/css/home.css">
-  
 
-  <div class="bg">
-    <div class="row">
+<header>
+       <a href="/logout"><button>LOOOUT</button></a> 
+    </header>
+
+<h1>login</h1>
+
+<form action="/user/login" method="POST">
+  <input type="text" placeholder="username" name="username">
+  <input type="password" placeholder="password" name="password">
+  <button type="submit">go</button>
+</form>
+
+<h1>signup</h1>
+
+<form action="/user/signup">
+  <input type="text" placeholder="username" name="username">
+  <input type="text" placeholder="email" name="email">
+  <input type="password" placeholder="password" name="password">
+  <button type="submit">go</button>
+</form>
+
+<div class="entry">
+  {{#if loggedIn}}
+  <h1>{{user}} is logged in!</h1>
+  {{else}}
+  <h1>no one logged in</h1>
+  {{/if}}
+</div>
+
+
+
+{{!-- <div class="bg">
+  <div class="row">
     <div class="col-12">
     </div>
     <div class="col">
-      
-        <h1 class="sondertitle">Vacation Packages</h1>
-     
+
+      <h1 class="sondertitle">Vacation Packages</h1>
+
     </div>
-  </div></div>
+  </div>
+</div>
 
 <div class="logincontainer">
   <div class="backbox">
@@ -46,16 +77,16 @@
             <div id="alert"></div>
           </div>
           <div class="form-group loginbutton">
-            <button type="submit" class="btn btn-primary" id="logInBtn">LOG IN</button>
+            <button class="btn btn-primary" id="logInBtn">LOG IN</button>
           </div>
         </form>
         <div class="works"></div>
-        <div id = "alert"></div>
+        <div id="alert"></div>
       </div>
     </div>
 
 
-    <div class="signup hide">
+    {{!-- <div class="signup hide">
       <h2>SIGN UP</h2>
       <div class="inputbox my-0 py-0">
         <form id="signup-form my-0 py-0">
@@ -77,7 +108,7 @@
           <div class="form-group">
             <button type="submit" id="signUp" class="btn btn-primary">SIGN UP</button>
           </div>
-        </form>
+        </form> --}}
 
 
       </div>
@@ -88,11 +119,14 @@
 
 
 
-</br>
+  </br>
 
 
-</div>
+</div> --}}
 
-  <script src="/js/home.js"></script>
-  <script src="/js/login.js"></script>
-  <script src="/js/signup.js"></script>
+{{!--
+<script src="/js/home.js"></script> --}}
+{{!--
+<script src="/js/login.js"></script> --}}
+{{!--
+<script src="/js/signup.js"></script> --}}

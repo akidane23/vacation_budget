@@ -35,4 +35,4 @@ UserTrip.init(
     }
   );
   
-module.exports = { UserTrip };
+module.exports = UserTrip;
