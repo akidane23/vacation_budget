@@ -35,10 +35,4 @@ UserTrip.init(
     }
   );
   
-  Trip.hasMany(User, {
-    through: 'UserTrip',
-    foreignKey: 'user',
-  });
-  
-
-module.exports = { UserTrip };
+module.exports = UserTrip;

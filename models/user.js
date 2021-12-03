@@ -42,20 +42,4 @@ User.init(
   }
 );
 
-User.associate = function (models) {
-  models.User.hasMany(models.Trip, {
-    through: "UserTrip"
-  });
-};
-
-//ADD PORTION OF BCRYPT TO HIDE USER PASSWORDS
-User.prototype.validPassword = function(password) {
-  return bcryptjs.compareSync(password, this.password);
-}
-
-User.hook("beforeCreate", function(user) {
-  user.password = bcryptjs.hashSync(user.password, bcryptjs.genSaltSync(10), null);
-});
-
-
-module.exports = { User };
+module.exports = User;

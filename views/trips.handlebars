@@ -1,0 +1,27 @@
+<h1> 
+
+    Welcome, {{user}}
+
+    <header>
+       <a href="/logout"><button>LOOOUT</button></a> 
+    </header>
+</h1>
+
+{{!-- loop over the array you get and parse it into HTML boxes
+    each box should have a button such taht when I click it, I'm signed up for the trip
+
+ --}}
+
+ <ul class="trips">
+  {{#each trips}}
+    <li id={{this.id}}>
+        <h3>name: {{this.title}}</h3>
+        <h3>location: {{this.location}}</h3>
+        {{!-- figureo out button functionality --}}
+        <button>go</button> 
+    </li>
+  {{/each}}
+</ul>
+
+
+ {{!-- Here, i can see my trips, maybe --}}
