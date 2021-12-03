@@ -1,13 +1,14 @@
 const { Model, DataTypes } = require('sequelize');
+const { Trip } = require('../../models/trip');
 const sequelize = require('../config/connection');
 // create our Post model
 class Post extends Model {
-  static upvote(body, models) {
+  static Trip(body, models) {
     return models.Vote.create({
       user_id: body.user_id,
       post_id: body.post_id
     }).then(() => {
-      return Post.findOne({
+      return Trip.findOne({
         where: {
           id: body.post_id
         },
@@ -37,7 +38,7 @@ class Post extends Model {
 }
 
 // create fields/columns for Post model
-Post.init(
+Trip.init(
   {
     id: {
       type: DataTypes.INTEGER,
