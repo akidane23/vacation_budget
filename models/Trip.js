@@ -5,6 +5,7 @@ class Trip extends Model {}
 
 Trip.init(
   {
+
        trip1: {
         type: DataTypes.STRING,
         allowNull: false,
@@ -26,6 +27,22 @@ Trip.init(
           len: [1, 125]
         }
       },
+
+//     id: {
+//       type: DataTypes.INTEGER,
+//       allowNull: false,
+//       primaryKey: true,
+//       autoIncrement: true
+//     },
+//     title: {
+//       type: DataTypes.STRING,
+//       allowNull: false
+//     },
+//     location: {
+//       type: DataTypes.STRING,
+//       allowNull: false,
+//     },
+
   },
   {
     sequelize,
@@ -35,6 +52,7 @@ Trip.init(
   }
 );
 
+
 Trip.belongsTo(User, {
     foreginKey: {
         allowNull: false
@@ -43,3 +61,6 @@ Trip.belongsTo(User, {
 });
 
 module.exports = { Trip };
+=======
+// module.exports = Trip;
+

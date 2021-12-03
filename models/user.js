@@ -42,6 +42,7 @@ User.init(
   }
 );
 
+
 User.associate = function (models) {
   models.User.hasMany(models.Trip, {
     through: "UserTrip"
@@ -59,3 +60,6 @@ User.hook("beforeCreate", function(user) {
 
 
 module.exports = { User };
+=======
+// module.exports = User;
+

@@ -34,7 +34,7 @@ UserTrip.init(
       modelName: 'user_trip',
     }
   );
-  
+
   Trip.hasMany(User, {
     through: 'UserTrip',
     foreignKey: 'user',
@@ -42,3 +42,6 @@ UserTrip.init(
   
 
 module.exports = { UserTrip };
+=======
+// module.exports = UserTrip;
+
