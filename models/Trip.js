@@ -61,6 +61,6 @@ Trip.belongsTo(User, {
 });
 
 module.exports = { Trip };
-=======
+
 // module.exports = Trip;
 

@@ -60,6 +60,6 @@ User.hook("beforeCreate", function(user) {
 
 
 module.exports = { User };
-=======
+
 // module.exports = User;
 
