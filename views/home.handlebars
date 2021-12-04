@@ -1,40 +1,44 @@
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-<link href='https://fonts.googleapis.com/css?family=Roboto:400,300,100' rel='stylesheet' type='text/css'>
+<script
+  src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"
+></script>
+<link
+  href="https://fonts.googleapis.com/css?family=Roboto:400,300,100"
+  rel="stylesheet"
+  type="text/css"
+/>
 
-<link rel="stylesheet" href="/css/home.css">
+<link rel="stylesheet" href="/css/home.css" />
 
 <header>
-       <a href="/logout"><button>LOOOUT</button></a> 
-    </header>
+  <a href="/logout"><button>LOGOUT</button></a>
+</header>
 
 <h1>login</h1>
 
 <form action="/user/login" method="POST">
-  <input type="text" placeholder="username" name="username">
-  <input type="password" placeholder="password" name="password">
+  <input type="text" placeholder="username" name="username" />
+  <input type="password" placeholder="password" name="password" />
   <button type="submit">go</button>
 </form>
 
 <h1>signup</h1>
 
-<form action="/user/signup">
-  <input type="text" placeholder="username" name="username">
-  <input type="text" placeholder="email" name="email">
-  <input type="password" placeholder="password" name="password">
+<form action="/user/signup" method="POST">
+  <input type="text" placeholder="username" name="username" />
+  <input type="text" placeholder="email" name="email" />
+  <input type="password" placeholder="password" name="password" />
   <button type="submit">go</button>
 </form>
 
 <div class="entry">
   {{#if loggedIn}}
-  <h1>{{user}} is logged in!</h1>
+    <h1>{{user}} is logged in!</h1>
   {{else}}
-  <h1>no one logged in</h1>
+    <h1>no one logged in</h1>
   {{/if}}
 </div>
 
-
-
-{{!-- <div class="bg">
+{{! <div class="bg">
   <div class="row">
     <div class="col-12">
     </div>
@@ -86,7 +90,7 @@
     </div>
 
 
-    {{!-- <div class="signup hide">
+  <div class="signup hide">
       <h2>SIGN UP</h2>
       <div class="inputbox my-0 py-0">
         <form id="signup-form my-0 py-0">
@@ -108,7 +112,7 @@
           <div class="form-group">
             <button type="submit" id="signUp" class="btn btn-primary">SIGN UP</button>
           </div>
-        </form> --}}
+        </form> 
 
 
       </div>
@@ -122,11 +126,4 @@
   </br>
 
 
-</div> --}}
-
-{{!--
-<script src="/js/home.js"></script> --}}
-{{!--
-<script src="/js/login.js"></script> --}}
-{{!--
-<script src="/js/signup.js"></script> --}}
+</div> }}
