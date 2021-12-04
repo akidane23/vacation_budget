@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-const Trip = require("./Trip");
-const User = require("./User");
-const UserTrip = require("./UserTrip");
-=======
 
 
 // import models
@@ -19,7 +14,6 @@ const userTrip = require('./usertrip.js');
 // const Trip = require("./Trip");
 // const User = require("./User");
 // const UserTrip = require("./UserTrip");
->>>>>>> baa7707bfe1710fdbb03529aaa87ff2c97b95943
 
 User.belongsToMany(Trip, {
     through: UserTrip,
@@ -27,17 +21,6 @@ User.belongsToMany(Trip, {
     foreign_key: "user_id"
 })
 
-<<<<<<< HEAD
-Trip.belongsToMany(User, {
-    through: UserTrip,
-    as: "user",
-    foreign_key: "trip_id"
-})
-
-module.exports = {
-    User, Trip, UserTrip
-}
-=======
 
 User.hasMany(Trip, {
   foreignKey: 'User_id',
@@ -63,7 +46,6 @@ Trip.hasMany(User, {
 //     User, Trip, UserTrip
 // }
 
->>>>>>> baa7707bfe1710fdbb03529aaa87ff2c97b95943
 
 // const models  = require('../../models');
 // const express = require('express');
