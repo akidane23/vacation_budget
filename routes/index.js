@@ -50,8 +50,8 @@ router.get("/trips", async (req, res) => {
 })
 
 router.get("/logout", (req, res) => {
-    req.session.loggedIn = false;
-    req.session.user = null;
+    req.session.destroy(err => {})
     res.redirect("/")
 })
+
 module.exports = router;

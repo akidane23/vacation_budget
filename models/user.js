@@ -42,9 +42,6 @@ User.init(
   }
 );
 
-<<<<<<< HEAD
-module.exports = User;
-=======
 
 User.associate = function (models) {
   models.User.hasMany(models.Trip, {
@@ -63,7 +60,6 @@ User.hook("beforeCreate", function(user) {
 
 
 module.exports = { User };
-=======
+
 // module.exports = User;
 
->>>>>>> baa7707bfe1710fdbb03529aaa87ff2c97b95943
