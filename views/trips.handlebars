@@ -1,9 +1,9 @@
 <h1> 
 
-    Welcome, {{user}}
+    Welcome, {{username}}
 
     <header>
-       <a href="/logout"><button>LOOOUT</button></a> 
+       <a href="/logout"><button>LOG OUT</button></a> 
     </header>
 </h1>
 
@@ -14,6 +14,21 @@
 
  <ul class="trips">
   {{#each trips}}
+    <li>
+        <h3>name: {{this.title}}</h3>
+        <h3>location: {{this.location}}</h3>
+        {{!-- figureo out button functionality --}}
+        <button id={{this.id}} class="add-trip">go</button> 
+    </li>
+  {{/each}}
+</ul>
+
+
+ {{!-- Here, i can see my trips, maybe --}}
+ {{#if hasTrips}}
+ <h3>my trips</h3>
+  <ul class="myTrips">
+  {{#each myTrips}}
     <li id={{this.id}}>
         <h3>name: {{this.title}}</h3>
         <h3>location: {{this.location}}</h3>
@@ -22,6 +37,8 @@
     </li>
   {{/each}}
 </ul>
+{{else}}
+<h3>no trips yet</h3>
+{{/if}}
 
-
- {{!-- Here, i can see my trips, maybe --}}
+<script src="/js/trip.js"></script>

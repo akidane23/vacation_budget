@@ -1,23 +1,19 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
-const bcryptjs = require('bcryptjs');
+
 class User extends Model {}
 
 User.init(
   {
-    fullName: {
-      type: DataTypes.STRING,
+    id: {
+      type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true,
       autoIncrement: true
     },
-    userName: {
+    username: {
       type: DataTypes.STRING,
-      allowNull: true,
-      unique: true,
-      validate: {
-        len: [1, 255]
-      }
+      allowNull: false
     },
     email: {
       type: DataTypes.STRING,
@@ -30,35 +26,18 @@ User.init(
     password: {
       type: DataTypes.STRING,
       allowNull: false,
+      validate: {
+        len: [4]
       }
-    },
+    }
+  },
   {
     sequelize,
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'User'
+    modelName: 'user'
   }
 );
 
-
-User.associate = function (models) {
-  models.User.hasMany(models.Trip, {
-    through: "UserTrip"
-  });
-};
-
-//ADD PORTION OF BCRYPT TO HIDE USER PASSWORDS
-User.prototype.validPassword = function(password) {
-  return bcryptjs.compareSync(password, this.password);
-}
-
-User.hook("beforeCreate", function(user) {
-  user.password = bcryptjs.hashSync(user.password, bcryptjs.genSaltSync(10), null);
-});
-
-
-module.exports = { User };
-
-// module.exports = User;
-
+module.exports = User;
