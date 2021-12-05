@@ -33,7 +33,6 @@ router.post("/user/login", async (req, res) => {
     console.log(req.body)
   const { username, password } = req.body;
   const user = await User.findOne({ where: { username } });
-  console.log(user)
   if (!user) return res.status(403).json({message: "invalid"});
   if (user.dataValues.password !== password) {
       console.log("not valid")
@@ -49,12 +48,10 @@ router.post("/user/signup", async (req, res) => {
   const { username, email, password } = req.body;
   try {
     const user = await User.findOne({ where: { username, email } });
-    if (!user) {
-      const newUser = await User.create({ username, email, password });
-      console.log(newUser.dataValues);
-      return res.redirect("/");
-    }
-    res.redirect("/");
+    if (user) return res.status(403).json({message: "exists"})
+    const newUser = await User.create({ username, email, password });
+    console.log(newUser.dataValues);
+    return res.status(200).json({message:"success"})
   } catch (error) {
     res.status(500);
   }

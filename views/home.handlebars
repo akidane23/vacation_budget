@@ -8,22 +8,64 @@
 />
 
 <link rel="stylesheet" href="/css/home.css" />
+{{!-- 
+ --}}
+
+ <head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hygge</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./assets/css/style.css" />
+</head>
+
+<body>
+  <!-- Navbar -->
+  <header class="hero is-success is-medium top-header">
+    <!-- Hero head: will stick at the top -->
+    <div class="hero-head">
+      <nav class="navbar">
+        <div class="container">
+          <div class="navbar-brand">
+            <a class="navbar-item title site-name"> Hygge </a>
+          </div>
+          <div class="navbar-menu">
+            <div class="navbar-end">
+              <span class="navbar-item">
+                <span class="navbar-item">
+                <a href="./index.html#about" class="button is-success is-inverted"> About Us </a>
+                </span>
+                <span class="navbar-item">
+                  <a href="./index.html#trips" class="button is-success is-inverted" class= "hide"> Trips </a>
+                </span>
+                <span class="navbar-item">
+                    <a href="./index.html#search" class="button is-success is-inverted"> Signup/Login </a>
+                  </span>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
 
 <header>
   <a href="/logout"><button>LOGOUT</button></a>
 </header>
 
-<h1>login</h1>
 
-<form action="/user/login" method="POST">
+<form id="login-form" "is-flex is-flex-direction-column account">
+  <h2 class="title is-3 section-title">Login</h2>
   <input type="text" placeholder="username" name="username" />
   <input type="password" placeholder="password" name="password" />
   <button type="submit">go</button>
 </form>
 
-<h1>signup</h1>
+<br>
 
-<form action="/user/signup" method="POST">
+<form id="signup-form" "is-flex is-flex-direction-column account">
+  <h2 class="title is-3 section-title">Sign Up</h2>
   <input type="text" placeholder="username" name="username" />
   <input type="text" placeholder="email" name="email" />
   <input type="password" placeholder="password" name="password" />
@@ -37,6 +79,8 @@
     <h1>no one logged in</h1>
   {{/if}}
 </div>
+
+<script src="/js/auth.js"></script>
 
 {{! <div class="bg">
   <div class="row">

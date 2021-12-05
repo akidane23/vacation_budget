@@ -32,6 +32,7 @@ app.use(session({
 // when we have routes, we'll "use" them here.
 app.use(router);
 
+
 sequelize.sync().then(() => {
     app.listen(PORT, () => console.log(`listning on ${PORT}`))
 })

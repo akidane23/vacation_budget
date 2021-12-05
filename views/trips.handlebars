@@ -11,8 +11,8 @@
     each box should have a button such taht when I click it, I'm signed up for the trip
 
  --}}
-
- <ul class="trips">
+<section class="is-flex is-flex-direction-column column-cust">
+<ul class="trips">
   {{#each trips}}
     <li>
         <h3>name: {{this.title}}</h3>
@@ -22,6 +22,8 @@
     </li>
   {{/each}}
 </ul>
+</section>
+ 
 
 
  {{!-- Here, i can see my trips, maybe --}}
