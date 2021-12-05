@@ -4,23 +4,23 @@ const TripData = [
   {
     title: "beach",
     location: "bahamas",
-    // date: "December 15 to December 19, 2022",
-    // includes: "4 Nights/ 5 Days. Food and Drink",
-    // price: "$2,550"npm 
+    date: "December 15 to December 19, 2022",
+    includes: "4 Nights/ 5 Days. Food and Drink",
+    price: "$2,550"
   },
   {
     title: "city",
     location: "new york",
-    // date: "December 15 to December 19, 2022",
-    // includes: "4 Nights/ 5 Days. Food and Drink",
-    // price: "$2,550"
+    date: "December 15 to December 19, 2022",
+    includes: "4 Nights/ 5 Days. Food and Drink",
+    price: "$2,550"
   },
   {
     title: "woods",
     location: "the woods",
-    // date: "December 15 to December 19, 2022",
-    // includes: "4 Nights/ 5 Days. Food and Drink",
-    // price: "$2,550"
+    date: "December 15 to December 19, 2022",
+    includes: "4 Nights/ 5 Days. Food and Drink",
+    price: "$2,550"
   },
 ];
 
