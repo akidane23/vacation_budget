@@ -19,6 +19,18 @@ Trip.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
+    // date: {
+    //   type: DataTypes.STRING,
+    //   allowNull: false
+    // },
+    // includes: {
+    //   type: DataTypes.STRING,
+    //   allowNull: false,
+    // },
+    // price: {
+    //   type: DataTypes.STRING,
+    //   allowNull: false
+    // },
   },
   {
     sequelize,

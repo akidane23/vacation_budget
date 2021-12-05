@@ -1,3 +1,5 @@
+//const { response } = require("express");
+
 const goButtons = document.getElementsByClassName("add-trip");
 
 for (let i = 0; i < goButtons.length; i++) {
@@ -15,3 +17,11 @@ for (let i = 0; i < goButtons.length; i++) {
     .catch(err => console.log(err));
   });
 }
+
+// fetch("/user/login")
+// .then(response => {
+//   if(response.status !== ok ){
+//     alert("You have to use a proper login")
+//   }
+// })
+// res => window.location.reload()

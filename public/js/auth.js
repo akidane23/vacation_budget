@@ -51,3 +51,4 @@ signupForm.addEventListener("submit", (e) => {
       }
   }).catch(err => console.log(err))
 });
+
