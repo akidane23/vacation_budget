@@ -20,7 +20,6 @@ async function getTrips(user_id, allTrips) {
 }
 
 router.get("/", (req, res) => {
-    console.log(req.session);
     if (req.session.loggedIn) {
       return res.redirect("/trips");
     } else {
@@ -31,17 +30,19 @@ router.get("/", (req, res) => {
   });
 
 router.post("/user/login", async (req, res) => {
+    console.log(req.body)
   const { username, password } = req.body;
   const user = await User.findOne({ where: { username } });
-  if (!user) return res.redirect("/"); // THIS MUST BE HANDLED DIFFERENTLY
-  if (user.dataValues.password === password) {
-    req.session.loggedIn = true;
+  console.log(user)
+  if (!user) return res.status(403).json({message: "invalid"});
+  if (user.dataValues.password !== password) {
+      console.log("not valid")
+    return res.status(403).json({message: "invalid"});
+  }
+  req.session.loggedIn = true;
     req.session.username = username;
     req.session.userId = user.dataValues.id;
-    return res.redirect("/trips");
-  } else {
-    return res.redirect("/");
-  }
+    return res.status(200).json({message: "success"});
 });
 
 router.post("/user/signup", async (req, res) => {
