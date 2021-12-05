@@ -62,3 +62,7 @@ router
   })
 
 module.exports = router;
+
+// add login to javascript 
+
+//<script src='/routes/index.js'></script>

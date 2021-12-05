@@ -37,8 +37,29 @@ User.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'user'
+    modelName: 'user',
+    // hooks: {
+    //   beforeCreate:  async function (user, options) {
+    //     console.log(user.password + " from before create")
+    //     user.password = await bcrypt.hash(user.password, bcrypt.genSalt());
+    //   },
+    //   beforeBulkCreate: async function (user, options) {
+    //     console.log(user.password)
+    //     user.password = await bcrypt.hash(user.password, bcrypt.getSalt());
+    //   }
+    // }
   }
 );
+
+// User.beforeCreate((user, options) => {
+//   console.log("before create fired")
+//   user.username = user.username+"hello";
+//   user.password = bcrypt.hashSync(user.password, bcrypt.genSaltSync());
+// })
+
+// User.beforeBulkCreate((user, options) => {
+//   console.log("before create fired")
+//   user.password = bcrypt.hashSync(user.password, bcrypt.genSaltSync());
+// })
 
 module.exports = User;
