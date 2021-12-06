@@ -94,5 +94,4 @@ router.post("/api/add-trip", async (req, res) => {
     return res.redirect('/trips')
 })
 
-
 module.exports = router;

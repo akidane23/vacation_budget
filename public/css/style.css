@@ -25,7 +25,7 @@ img {
 }
 
 #about {
-    background-color: #D2B48C;
+    background-color: #ffffff;
     padding: 25%;
     margin: auto;
     margin-top: 5%;
@@ -217,7 +217,7 @@ img {
 }
 
 .charity-section {
-    background-color: rgb(72, 199, 142,0.7);
+    background-color: rgba(206, 186, 149, 0.89);
     border: 3px solid #000;
     width: 70%;
     margin: 70px auto 0 auto;
@@ -243,10 +243,16 @@ img {
 
 
 
-#about {
-    background-color: #D2B48C;
+#about{
+    background-color: #d2b48cf6;
     padding: 2% 5% 5% 5%;
     width: 75%;
     margin: auto;
 }
 
+#login-form,#signup-form  {
+    background-color: #d2b48cf6;
+    padding: 2% 1% 1% 1%;
+    width: 75%;
+    margin: auto;
+}
