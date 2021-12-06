@@ -15,7 +15,7 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hygge</title>
+  <title>Vacation Packages</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css" />
   <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="./assets/css/style.css" />
@@ -23,26 +23,29 @@
 
 <body>
   <!-- Navbar -->
-  <header class="hero is-success is-medium top-header">
+  <header class="hero has-background-warning-light is-medium top-header">
     <!-- Hero head: will stick at the top -->
     <div class="hero-head">
       <nav class="navbar">
         <div class="container">
           <div class="navbar-brand">
-            <a class="navbar-item title site-name"> Hygge </a>
+            <a class="navbar-item title site-name"> Vacation Packages </a>
           </div>
           <div class="navbar-menu">
             <div class="navbar-end">
               <span class="navbar-item">
                 <span class="navbar-item">
-                <a href="./index.html#about" class="button is-success is-inverted"> About Us </a>
+                <a href="./view/home.handlebars#about" class="button is-success is-inverted"> About Us </a>
                 </span>
                 <span class="navbar-item">
-                  <a href="./index.html#trips" class="button is-success is-inverted" class= "hide"> Trips </a>
+                  <a href="/trips" class="button is-success is-inverted" class= "hide"> Trips </a>
                 </span>
                 <span class="navbar-item">
-                    <a href="./index.html#search" class="button is-success is-inverted"> Signup/Login </a>
-                  </span>
+                    <a href="./view/home.handlebars#search" class="button is-success is-inverted"> Signup/Login </a>
+                </span>
+                <span class="navbar-item">
+                    <a href="/logout" class="button is-success is-inverted"> Logout </a>
+                </span>
             </div>
           </div>
         </div>
@@ -52,16 +55,16 @@
 
 
 <section id='about' class="is-flex is-flex-direction-column "> 
-    <h2 class="title is-3 section-title">About Us</h2>
-    <p> Hygge (hyoo-guh) is a Danish word for creating a warm atmosphere and enjoying the good things in life with good people.
-       That is what we are all about. Our team does all the research and booking so you can have the trip you've been dreaming of 
-       without any of the stress of planning or worry of traveing alone. Signup with us and you can join our trips with a press of 
-       a button! Your vacation, worry free. 
+    <h2 class="title is-3 section-title">Need a vacation?</h2>
+    <p> Are you tired of the grind? Do you think you need time off? Do you make 
+      too many decisions in life? Well, don't go too far becuase we have the solution for you!
+      Welcome to the Vacation Packages chooser. We will offer you just 3 of the best
+      places to vacation on earth and all you need to do is pick your favorite!
     </p>
   </section>
 
 <header>
-  <a href="/logout"><button>LOGOUT</button></a>
+  <span> .</span>
 </header>
 
 <form id="login-form" "is-flex is-flex-direction-column account">

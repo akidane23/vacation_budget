@@ -104,7 +104,7 @@ body, html {
   
   .login h2,
   .signup h2 {
-    color: #35B729;
+    color: #c2bb7ce1;
     font-size:22px;
   }
   
@@ -125,7 +125,7 @@ body, html {
   
   .login button,
   .signup button{
-    background-color: #35B729;
+    background-color: #c0b574c0;
     border: none;
     color:white;
     font-size: 12px;
