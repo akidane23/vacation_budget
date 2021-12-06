@@ -1,5 +1,4 @@
-<h1> 
-
+<h1 class ="trip-nav"> 
     Welcome, {{username}}
 
     <header>
@@ -7,11 +6,8 @@
     </header>
 </h1>
 
-{{!-- loop over the array you get and parse it into HTML boxes
-    each box should have a button such taht when I click it, I'm signed up for the trip
-
- --}}
 <section class="is-flex is-flex-direction-column column-cust">
+<h3 class="trips">Choose a Trip!</h3>
 <ul class="trips">
   {{#each trips}}
     <li>
@@ -20,19 +16,16 @@
         <h3>date: {{this.date}}</h3>
         <h3>includes: {{this.includes}}</h3>
         <h3>price: {{this.price}}</h3>
-        {{!-- figureo out button functionality --}}
-        <button id={{this.id}} class="add-trip">go</button> 
+        <button id={{this.id}} class="add-trip">GO!</button> 
     </li>
   {{/each}}
 </ul>
 </section>
  
-
-
- {{!-- Here, i can see my trips, maybe --}}
  {{#if hasTrips}}
- <h3>my trips</h3>
-  <ul class="myTrips">
+ <section class="is-flex is-flex-direction-column column-cust">
+ <h3 class="trips">My Trip or Trips!</h3>
+  <ul class="trips">
   {{#each myTrips}}
     <li id={{this.id}}>
         <h3>name: {{this.title}}</h3>
@@ -40,13 +33,13 @@
         <h3>date: {{this.date}}</h3>
         <h3>includes: {{this.includes}}</h3>
         <h3>price: {{this.price}}</h3>
-        {{!-- figureo out button functionality --}}
-        <button>go</button> 
+        <button>DELETE</button> 
     </li>
   {{/each}}
 </ul>
 {{else}}
 <h3>no trips yet</h3>
+</section>
 {{/if}}
 
 <script src="/js/trip.js"></script>

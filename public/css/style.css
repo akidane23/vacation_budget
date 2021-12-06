@@ -6,7 +6,7 @@ body {
     background-image: url('../images/homepage.jpeg');
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-size: 100% 100%;
+    background-size: 100% ;
 }
 
 img {
@@ -34,12 +34,17 @@ img {
 
 .column-cust {
     float: left;
-    width: 33.33%;
-    background-color: #D2B48C;
+    justify-content: space-between;
+    width: 50%;
+    background-color: #d2b48ca1;
   }
-  
-  /* Clear floats after the columns */
-  .row:after {
+
+.trip-nav {
+    background-color: #d2b48ca1;
+    margin-bottom: 0px;
+  }
+
+.row:after {
     content: "";
     display: table;
     clear: both;
@@ -100,15 +105,6 @@ img {
     margin-bottom: 25px;
 }
 
-.footer {
-    width: auto;
-    background-color:#D2B48C;
-    color: #fff;
-    font-weight: bold;
-    padding: 50px;
-    margin: 180px auto;
-    margin-bottom: 0;
-}
 .input {
     width: 500px;
     border: 3px solid #D2B48C;
@@ -209,7 +205,6 @@ img {
     font-weight: bold;
 }
 
-/* Clearfix (clear floats) */
 .row::after {
     content: "";
     clear: both;
@@ -223,10 +218,10 @@ img {
     margin: 70px auto 0 auto;
     padding: 0 30px 30px 30px;
 }
-
+/* 
 .footer {
     background-size: 100% 100%;
-}
+} */
 
 .error {
     text-align: center;
@@ -241,8 +236,6 @@ img {
     margin-bottom: 15px;
 }
 
-
-
 #about{
     background-color: #d2b48cf6;
     padding: 2% 5% 5% 5%;
@@ -256,3 +249,10 @@ img {
     width: 75%;
     margin: auto;
 }
+
+.trips {
+    justify-content: space-between;
+     margin: auto;
+     width: 50%;
+     padding: 10px;
+ }
