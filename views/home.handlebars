@@ -8,8 +8,7 @@
 />
 
 <link rel="stylesheet" href="/css/home.css" />
-{{!-- 
- --}}
+
 
  <head>
   <meta charset="UTF-8" />
@@ -88,98 +87,9 @@
   {{#if loggedIn}}
     <h1>{{user}} is logged in!</h1>
   {{else}}
-    <h1>no one logged in</h1>
+    <h1></h1>
   {{/if}}
 </div>
 
 <script src="/js/auth.js"></script>
 
-{{! <div class="bg">
-  <div class="row">
-    <div class="col-12">
-    </div>
-    <div class="col">
-
-      <h1 class="sondertitle">Vacation Packages</h1>
-
-    </div>
-  </div>
-</div>
-
-<div class="logincontainer">
-  <div class="backbox">
-    <div class="loginMsg">
-      <div class="textcontent">
-        <p class="title">Not a member?</p>
-        <p>Sign up to get started!</p>
-        <button id="switch1">Sign Up</button>
-      </div>
-    </div>
-    <div class="signupMsg visibility">
-      <div class="textcontent">
-        <p class="title">Already a member?</p>
-        <p>Log in to join a trip!</p>
-        <button id="switch2">LOG IN</button>
-      </div>
-    </div>
-  </div>
-
-  <div class="frontbox">
-    <div class="login">
-      <h2>LOG IN</h2>
-      <div class="inputbox">
-        <form id="login-form" class="needs-validation" notvalid>
-          <div class="form-group">
-            <input type="text" class="form-control" id="email-input1" placeholder="  EMAIL" required>
-          </div>
-          <div class="form-group">
-            <input type="password" class="form-control" id="password-input1" placeholder="  PASSWORD" required>
-            <div id="alert"></div>
-          </div>
-          <div class="form-group loginbutton">
-            <button class="btn btn-primary" id="logInBtn">LOG IN</button>
-          </div>
-        </form>
-        <div class="works"></div>
-        <div id="alert"></div>
-      </div>
-    </div>
-
-
-  <div class="signup hide">
-      <h2>SIGN UP</h2>
-      <div class="inputbox my-0 py-0">
-        <form id="signup-form my-0 py-0">
-          <div class="form-group my-1 py-1">
-            <input type="text" class="form-control my-0 py-0" id="user-name-input" placeholder="  USER NAME" required>
-          </div>
-          <div class="form-group">
-            <input type="text" class="form-control mb-1" id="first-name-input" placeholder="  FIRST NAME" required>
-          </div>
-          <div class="form-group">
-            <input type="text" class="form-control m-1" id="last-name-input" placeholder="  LAST NAME" required>
-          </div>
-          <div class="form-group">
-            <input type="text" class="form-control m-1" id="email-input" placeholder="  EMAIL ADDRESS" required>
-          </div>
-          <div class="form-group">
-            <input type="password" class="form-control m-1" id="password-input" placeholder="  PASSWORD" required>
-          </div>
-          <div class="form-group">
-            <button type="submit" id="signUp" class="btn btn-primary">SIGN UP</button>
-          </div>
-        </form> 
-
-
-      </div>
-
-    </div>
-  </div>
-
-
-
-
-  </br>
-
-
-</div> }}

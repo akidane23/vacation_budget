@@ -18,10 +18,3 @@ for (let i = 0; i < goButtons.length; i++) {
   });
 }
 
-// fetch("/user/login")
-// .then(response => {
-//   if(response.status !== ok ){
-//     alert("You have to use a proper login")
-//   }
-// })
-// res => window.location.reload()
