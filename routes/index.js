@@ -2,8 +2,7 @@ const express = require("express");
 const { User, Trip, UserTrip } = require("../models");
 const router = express.Router();
 
-// var users = require('./users.js');
-// var vacationOptions = require('./vacationOptions.js');
+
 
 async function getTrips(user_id, allTrips) {
   const myTrips = [];
