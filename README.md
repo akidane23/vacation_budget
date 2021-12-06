@@ -22,3 +22,5 @@ Vacation Packages is a travel application that offers a variety of group trip pa
 ## Mock-Up
 
 ## Deployed Link
+The following in the link to our herokuapp that will host the deployed website.
+https://rocky-eyrie-75932.herokuapp.com/
