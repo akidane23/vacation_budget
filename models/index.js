@@ -1,5 +1,5 @@
 const Trip = require("./Trip");
-const User = require("./User");
+const User = require("./user");
 const UserTrip = require("./UserTrip");
 
 User.belongsToMany(Trip, {
